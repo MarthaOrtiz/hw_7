@@ -25,3 +25,4 @@ return 0;
 }
 
 Estudiantes tarea 6: Stefano Lacorazza Buitrago, Martha Ines Ortiz Torres.
+El archivo de IC.c corresponde al esqueleto del archivo de las condiciones iniciales. Por alguna razon que ahorita desconozco se modificó el commit.
