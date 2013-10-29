@@ -23,3 +23,5 @@ for (i=0;i<n_points;i++)
 
 return 0;
 }
+
+Estudiantes tarea 6: Stefano Lacorazza Buitrago, Martha Ines Ortiz Torres.

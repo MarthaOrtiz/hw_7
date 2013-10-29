@@ -23,11 +23,16 @@ int i;
 FILE *file; 
 file = fopen("resultados.txt","a+"); 
 
+<<<<<<< HEAD
 
+=======
+/*
+>>>>>>> e8046fc0c35b0a8a1fa55e8647d2595d0c59a1bd
 for(i=1;i<121;i++)
  {
 if(i<13){
 	posx[i]=10*sin(i*pi/6)+xo;
+<<<<<<< HEAD
 	posy[i]=10*cos(i*pi/6)+yo;
 	velx[i]=GM*cos(i*pi/6)/10+vxo;
 	vely[i]=-GM*sin(i*pi/6)/10+vyo;
@@ -110,11 +115,57 @@ else {
 	fprintf(file,"%s",","); 
 	fprintf(file,"%f",vely[i]); 
 	fprintf(file,"\n"); 
+=======
+	posy[i]=10*sin(i*pi/6)+yo;
+	velx[i]=GM*cos(i*pi/6)/10+vxo;
+	vely[i]=-GM*sin(i*pi/6)/10+vyo;
+	;
+fprintf(file,"%s","0,0,0,0"); 
+}
+else if(i<31){
+	posx[i]=20*sin(i*pi/9)+xo;
+	posy[i]=20*sin(i*pi/9)+yo;
+	velx[i]=GM*cos(i*pi/9)/20+vxo;
+	vely[i]=-GM*sin(i*pi/9)/20+vyo;
+	fprintf(file,"%s","0,0,0,0");
+}
+else if(i<55){
+	posx[i]=30*sin(i*pi/12)+xo;
+	posy[i]=30*sin(i*pi/12)+yo;
+	velx[i]=GM*cos(i*pi/12)/30+vxo;
+	vely[i]=-GM*sin(i*pi/12)/30+vyo;
+	fprintf(file,"%s","0,0,0,0");
+}
+else if(i<85){
+	posx[i]=40*sin(i*pi/15)+xo;
+	posy[i]=40*sin(i*pi/15)+yo;
+	velx[i]=GM*cos(i*pi/15)/40+vxo;
+	vely[i]=-GM*sin(i*pi/15)/40+vyo;
+	fprintf(file,"%s","0,0,0,0");
+}
+else if(i<85){
+	posx[i]=40*sin(i*pi/15)+xo;
+	posy[i]=40*sin(i*pi/15)+yo;
+	velx[i]=GM*cos(i*pi/15)/40+vxo;
+	vely[i]=-GM*sin(i*pi/15)/40+vyo;
+	printf("%f\n",posx[i] );
+}
+else {
+	posx[i]=50*sin(i*pi/18)+xo;
+	posy[i]=50*sin(i*pi/18)+yo;
+	velx[i]=GM*cos(i*pi/18)/50+vxo;
+	vely[i]=-GM*sin(i*pi/18)/50+vyo;
+	fprintf(file,"%s","0,0,0,0"); 
+>>>>>>> e8046fc0c35b0a8a1fa55e8647d2595d0c59a1bd
 }
 }
 
 	
+<<<<<<< HEAD
 
+=======
+*/
+>>>>>>> e8046fc0c35b0a8a1fa55e8647d2595d0c59a1bd
 fclose(file); 
 return 0;
 }
