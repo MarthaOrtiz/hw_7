@@ -14,15 +14,27 @@ float posy [121];
 float velx [121];
 float vely [121];
 
-float xo=atof(argv[0]);
-float yo=atof(argv[1]);
-float vxo=atof(argv[2]);
-float vyo=atof(argv[3]);
+float xo=atof(argv[1]);
+float yo=atof(argv[2]);
+float vxo=atof(argv[3]);
+float vyo=atof(argv[4]);
 int i;
 
 FILE *file; 
 file = fopen("resultados.txt","a+"); 
 
+posx[0]=xo;
+posy[0]=yo;
+velx[0]=vxo;
+vely[0]=vyo;
+fprintf(file,"%f",posx[0]); 
+fprintf(file,"%s"," ");
+fprintf(file,"%f",posy[0]); 
+fprintf(file,"%s"," ");
+fprintf(file,"%f",velx[0]); 
+fprintf(file,"%s"," ");
+fprintf(file,"%f",vely[0]); 
+fprintf(file,"\n"); 
 
 for(i=1;i<121;i++)
  {
@@ -33,11 +45,11 @@ if(i<13){
 	vely[i]=-GM*sin(i*pi/6)/10+vyo;
 	
 	fprintf(file,"%f",posx[i]); 
-	fprintf(file,"%s",","); 
+	fprintf(file,"%s"," ");
 	fprintf(file,"%f",posy[i]); 
-	fprintf(file,"%s",","); 
+	fprintf(file,"%s"," ");
 	fprintf(file,"%f",velx[i]); 
-	fprintf(file,"%s",","); 
+	fprintf(file,"%s"," ");
 	fprintf(file,"%f",vely[i]); 
 	fprintf(file,"\n"); 
 }
@@ -47,11 +59,11 @@ else if(i<31){
 	velx[i]=GM*cos(i*pi/9)/20+vxo;
 	vely[i]=-GM*sin(i*pi/9)/20+vyo;
 	fprintf(file,"%f",posx[i]); 
-	fprintf(file,"%s",","); 
+	fprintf(file,"%s"," ");
 	fprintf(file,"%f",posy[i]); 
-	fprintf(file,"%s",","); 
+	fprintf(file,"%s"," ");
 	fprintf(file,"%f",velx[i]); 
-	fprintf(file,"%s",","); 
+	fprintf(file,"%s"," ");	
 	fprintf(file,"%f",vely[i]); 
 	fprintf(file,"\n"); 
 }
@@ -61,11 +73,11 @@ else if(i<55){
 	velx[i]=GM*cos(i*pi/12)/30+vxo;
 	vely[i]=-GM*sin(i*pi/12)/30+vyo;
 	fprintf(file,"%f",posx[i]); 
-	fprintf(file,"%s",","); 
+	fprintf(file,"%s"," ");	 
 	fprintf(file,"%f",posy[i]); 
-	fprintf(file,"%s",","); 
+	fprintf(file,"%s"," ");	 
 	fprintf(file,"%f",velx[i]); 
-	fprintf(file,"%s",","); 
+	fprintf(file,"%s"," ");	 
 	fprintf(file,"%f",vely[i]); 
 	fprintf(file,"\n"); 
 }
@@ -75,11 +87,11 @@ else if(i<85){
 	velx[i]=GM*cos(i*pi/15)/40+vxo;
 	vely[i]=-GM*sin(i*pi/15)/40+vyo;
 	fprintf(file,"%f",posx[i]); 
-	fprintf(file,"%s",","); 
+	fprintf(file,"%s"," ");	
 	fprintf(file,"%f",posy[i]); 
-	fprintf(file,"%s",","); 
+	fprintf(file,"%s"," ");	 
 	fprintf(file,"%f",velx[i]); 
-	fprintf(file,"%s",","); 
+	fprintf(file,"%s"," ");	
 	fprintf(file,"%f",vely[i]); 
 	fprintf(file,"\n"); 
 }
@@ -89,11 +101,11 @@ else if(i<85){
 	velx[i]=GM*cos(i*pi/15)/40+vxo;
 	vely[i]=-GM*sin(i*pi/15)/40+vyo;
 	fprintf(file,"%f",posx[i]); 
-	fprintf(file,"%s",","); 
+	fprintf(file,"%s"," ");	
 	fprintf(file,"%f",posy[i]); 
-	fprintf(file,"%s",","); 
+	fprintf(file,"%s"," ");	
 	fprintf(file,"%f",velx[i]); 
-	fprintf(file,"%s",","); 
+	fprintf(file,"%s"," ");	
 	fprintf(file,"%f",vely[i]); 
 	fprintf(file,"\n"); 
 }
@@ -103,11 +115,11 @@ else {
 	velx[i]=GM*cos(i*pi/18)/50+vxo;
 	vely[i]=-GM*sin(i*pi/18)/50+vyo;
 	fprintf(file,"%f",posx[i]); 
-	fprintf(file,"%s",","); 
+	fprintf(file,"%s"," ");	
 	fprintf(file,"%f",posy[i]); 
-	fprintf(file,"%s",","); 
+	fprintf(file,"%s"," ");	 
 	fprintf(file,"%f",velx[i]); 
-	fprintf(file,"%s",","); 
+	fprintf(file,"%s"," ");	 
 	fprintf(file,"%f",vely[i]); 
 	fprintf(file,"\n"); 
 }
