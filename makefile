@@ -1,13 +1,25 @@
-a.out: IC1.h evolve.h graficas
+a.out: IC1.h evolve1g.h IC2.h  evolve.h graficas.h
 
-IC1.h: IC1.c
-	cc IC1.c -lm
+IC1.h: IC_avan.c
+	cc IC_avan.c -lm
+	./a.out 0 0 0 0 
 
-evolve.h: evolve.c
-	cc evolve.c -lm
+evolve1g.h: evolve1g.c
+	cc evolve1g.c -lm 
+	./a.out
 
-graficas: IC1.h evolve.h
-	python plots.py
+IC2.h: IC_avan.c
+	cc IC_avan.c -lm
+	./a.out 150 200 0 -100
+
+evolve.h: prueba.c
+	cc prueba.c -lm 
+	./a.out
+
+graficas.h: IC1.h evolve1g.h IC2.h evolve.h
+	python plots.py 
+	python plots2galax.py
+
 
 clean:
 	rm -f*.h

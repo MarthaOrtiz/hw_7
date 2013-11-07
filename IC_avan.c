@@ -5,7 +5,7 @@
 #define USAGE "./a.out n_times value_a value_b"
 
 #define pi 3.141592 
-#define GM 4498949
+#define GM 44989
 
 int main(int argc, char** argv){
 
