@@ -9,21 +9,26 @@
 
 int main(int argc, char** argv){
 
+FILE *file;
+file=fopen("resultados.txt","a+");
+
 float ID [121];
 float posx [121];
 float posy [121];
 float velx [121];
 float vely [121];
 
-float xo=atof(argv[1]);
-float yo=atof(argv[2]);
-float vxo=atof(argv[3]);
-float vyo=atof(argv[4]);
+float xo=150.0;
+float yo=200.0;
+float vxo=0.0;
+float vyo=-100.0;
 int i;
 
+/*
 FILE *file; 
-file = fopen("resultados.txt","a+"); 
-ID[0]=0.0;
+file = fopen("resultados_galax2.txt","a+"); 
+*/
+ID[0]=121.0;
 posx[0]=xo;
 posy[0]=yo;
 velx[0]=vxo;
@@ -41,7 +46,7 @@ vely[0]=vyo;
 for(i=1;i<121;i++)
  {
 if(i<13){
-	ID[i]=0.0 + i;
+	ID[i]=121.0 + i;
 	posx[i]=10*sin(i*pi/6)+xo;
 	posy[i]=10*cos(i*pi/6)+yo;
 	velx[i]=pow(GM/10,1/2) * cos(i*pi/6) +vxo;
@@ -59,7 +64,7 @@ if(i<13){
 	fprintf(file,"\n"); 
 }
 else if(i<31){
-	ID[i]=0.0 + i;
+	ID[i]=121.0 + i;
 	posx[i]=20*sin(i*pi/9)+xo;
 	posy[i]=20*cos(i*pi/9)+yo;
 	velx[i]=pow(GM/20,1/2) * cos(i*pi/9) +vxo;
@@ -76,7 +81,7 @@ else if(i<31){
 	fprintf(file,"\n"); 
 }
 else if(i<55){
-	ID[i]=0.0 + i;
+	ID[i]=121.0 + i;
 	posx[i]=30*sin(i*pi/12)+xo;
 	posy[i]=30*cos(i*pi/12)+yo;
 	velx[i]=pow(GM/30,1/2) * cos(i*pi/12) +vxo;
@@ -93,7 +98,7 @@ else if(i<55){
 	fprintf(file,"\n"); 
 }
 else if(i<85){
-	ID[i]=0.0 + i;
+	ID[i]=121.0 + i;
 	posx[i]=40*sin(i*pi/15)+xo;
 	posy[i]=40*cos(i*pi/15)+yo;
 	velx[i]=pow(GM/40,1/2) * cos(i*pi/15) +vxo;
@@ -111,7 +116,7 @@ else if(i<85){
 }
 
 else {
-	ID[i]=0.0 + i;
+	ID[i]=121.0 + i;
 	posx[i]=50*sin(i*pi/18)+xo;
 	posy[i]=50*cos(i*pi/18)+yo;
 	velx[i]=pow(GM/50,1/2) * cos(i*pi/18) +vxo;
@@ -132,6 +137,7 @@ else {
 	
 
 fclose(file); 
+
 return 0;
 }
 
